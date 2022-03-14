@@ -1,6 +1,6 @@
 {
   "name": "@tv_tickets/common",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
   "types": "build/",
@@ -8,9 +8,10 @@
     "build/**/*"
   ],
   "scripts": {
-    "clean": "del-cli ./build/*",
-    "build": "npm run clean && tsc",
-    "pub": "npm run build && git init && git add ."
+    "clean":"del-cli ./build/*",
+    "build":"npm run clean && tsc",
+    "pub":"npm run build && git init && git add . && git commit -m \"Update\" && npm version patch && npm publish --access public"
+    
   },
   "author": "",
   "license": "ISC",
