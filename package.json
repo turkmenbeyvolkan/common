@@ -4,6 +4,9 @@
   "description": "",
   "main": "build/index.js",
   "types": "build/",
+  "files": [
+    "build/**/*"
+  ],
   "scripts": {
     "clean":"del-cli ./build/*",
     "build":"npm run clean && tsc",
