@@ -8,6 +8,7 @@ class Publisher {
     publishData() {
         new Promise((resolve, reject) => {
             try {
+                console.log();
                 this.client.publish(this.subject, this.toString());
                 resolve();
             }
