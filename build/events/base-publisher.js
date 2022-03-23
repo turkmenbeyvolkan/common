@@ -6,7 +6,15 @@ class Publisher {
         this.client = client;
     }
     publishData() {
-        this.client.publish(this.subject, this.toString());
+        new Promise((resolve, reject) => {
+            try {
+                this.client.publish(this.subject, this.toString());
+                resolve();
+            }
+            catch (error) {
+                reject(error);
+            }
+        });
     }
     toString() {
         return JSON.stringify(this.data);
